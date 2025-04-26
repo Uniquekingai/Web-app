@@ -1,0 +1,172 @@
+/* Basic Reset and Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background from image */
+    color: #ffffff; /* Default text color */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Clean, modern font */
+    line-height: 1.5;
+    direction: ltr; /* Assume LTR for now based on the image */
+}
+
+.app-container {
+    max-width: 450px; /* Adjust max width as needed for typical phone screen */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the main content */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px; /* Space below header */
+    color: #ffc107; /* Yellow color for header text */
+    font-size: 1.3em; /* Adjust size */
+    font-weight: bold;
+}
+
+.header .app-title {
+    /* Style for "Gold Coin" */
+}
+
+.header .balance {
+    /* Style for "1050 G" */
+}
+
+/* Card Styling (Used for Spin, Game List, Task Item) */
+.card {
+    background-color: #2c2c2c; /* Slightly lighter dark for cards */
+    border-radius: 12px; /* Rounded corners for cards */
+    padding: 15px;
+    margin-bottom: 20px; /* Space below each card */
+}
+
+/* Spin Section */
+.spin-section .spin-content {
+     display: flex; /* Arrange icon and text side by side */
+     align-items: center; /* Vertically align items */
+}
+
+.spin-section .spin-icon {
+     width: 60px; /* Adjust size of the icon */
+     height: 60px;
+     margin-right: 15px; /* Space between icon and text */
+     /* Styles for the actual icon image */
+     object-fit: contain; /* Ensure icon scales correctly */
+}
+
+.spin-section .spin-text {
+    /* Container for the text next to the icon */
+    flex-grow: 1; /* Allow text container to take available space */
+}
+
+.spin-section .spin-title {
+    font-size: 1.5em; /* Adjust size */
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    margin-bottom: 5px; /* Space below title */
+}
+
+.spin-section .spin-chances {
+    font-size: 0.9em; /* Adjust size */
+    color: #cccccc; /* Lighter grey text */
+}
+
+/* Section Titles (e.g., "Game Zone", "Tasks") */
+.section-title {
+    font-size: 1.1em; /* Adjust size */
+    font-weight: bold;
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 10px; /* Space below title */
+    color: #ffffff; /* White text */
+}
+
+/* Game List Section */
+.game-list {
+    padding: 0 15px; /* Add horizontal padding inside the game list card */
+}
+
+.game-list .game-item {
+    display: flex; /* Arrange icon and name side by side */
+    align-items: center; /* Vertically align items */
+    padding: 15px 0; /* Vertical padding for each game item */
+    border-bottom: 1px solid #444; /* Separator line between items */
+}
+
+.game-list .game-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.game-list .game-icon {
+     width: 40px; /* Adjust size of game icons */
+     height: 40px;
+     margin-right: 15px; /* Space between icon and name */
+      object-fit: contain; /* Ensure icon scales correctly */
+}
+
+.game-list .game-name {
+     font-size: 1.1em; /* Adjust size */
+     color: #ffffff; /* White text */
+}
+
+/* Tasks Section */
+.tasks-section .task-item {
+     display: flex; /* Arrange icon and text side by side */
+     align-items: center; /* Vertically align items */
+     /* This card looks like an input field in the image */
+     background-color: #3a3a3a; /* Darker background for task item card */
+     border-radius: 8px; /* Slightly less rounded */
+     padding: 12px 15px; /* Adjust padding */
+}
+
+.tasks-section .task-icon {
+    margin-right: 10px; /* Space between icon and text */
+    /* Style for the icon, e.g., font size if using unicode/font icon */
+    font-size: 1.2em;
+}
+
+ .tasks-section .task-text {
+     color: #cccccc; /* Grey text */
+     font-size: 1em;
+ }
+
+
+/* Withdraw Button */
+.withdraw-button {
+    display: block; /* Make it a block element so it takes full width */
+    width: 100%; /* Full width */
+    background-color: #ffc107; /* Orange/Yellow color */
+    color: #000000; /* Black text */
+    font-size: 1.2em; /* Adjust size */
+    font-weight: bold;
+    padding: 15px 20px; /* Padding inside the button */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer; /* Show hand cursor on hover */
+    margin-top: 30px; /* Space above the button */
+    text-align: center; /* Center the text */
+    transition: background-color 0.2s ease; /* Smooth transition on hover */
+}
+
+.withdraw-button:hover {
+     background-color: #ffa000; /* Darker orange on hover */
+}
+
+/* Basic responsiveness (optional, for smaller screens) */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 15px;
+    }
+    .header {
+        font-size: 1.2em;
+    }
+    .spin-section .spin-title {
+        font-size: 1.3em;
+    }
+    .withdraw-button {
+         font-size: 1.1em;
+         padding: 12px 15px;
+    }
+}
